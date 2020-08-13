@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
     "postinstall": "npm run build",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsc-watch --onSuccess \"nodemon dist/index.js\""
+    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "NODE_ENV=development tsc-watch --onSuccess \"nodemon dist/index.js\""
   },
   "keywords": [],
   "author": "",

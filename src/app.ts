@@ -23,7 +23,7 @@ passport.use(passportMiddleware);
 app.use('/api', aythRoutes);
 app.use('/api', specialRoutes);
 app.get('/', (req, res) => {
-    return res.send(`<h3>The API is at http://localhost:${app.get('port')}</h3>`);
+    return res.send(`<h3>The API is running at http://localhost:${app.get('port')}</h3>`);
   })
 
 export default app;
